@@ -1,0 +1,75 @@
+<div class="container" >
+  <div class="row">
+
+      <div class="col">
+          <div class="card">
+            <img [src]="membre.afficheUrl" class="card-img-top img-responsive " alt="Hollywood Sign on The Hill"/>
+            <div class="card-body">
+              <h5 class="card-title">{{membre.title}}</h5>
+              <p class="card-text">
+                {{membre.email}}
+              </p>
+              <p class="card-text">
+                {{membre.status}}
+              </p>
+              <p class="card-text">
+                {{membre.ceinture}}
+              </p>
+              <p class="card-text">
+                {{membre.dateofbirth | date :'yyyy'}}
+              </p>
+              <button class="bg-primary text-white" routerLink="">Retour à la page d'accueil</button>
+
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <h1>Le Karaté Shotokan</h1>
+        <img src="../../assets/dragon.png" alt="dragon" width="350px" height="400px">
+
+        <p>Le Karaté est un art martial à main nue, (KARA = Vide ; TE = Main ; DO = Voie),
+          la voie de la main vide.
+
+          Le Karaté consiste en l’utilisation de techniques à la fois offensives
+          et défensives faisant appel à toutes les parties du corps : mains, pieds, etc.
+
+          Le karaté repose sur le principe du blocage et contre-attaque, ce qui
+          inculque au pratiquant l’idée de ne jamais frapper le premier et de ne se
+          servir de son arme naturelle que pour se défendre.
+
+          Le karaté est le produit d’une histoire riche, avec de très
+          nombreuses variations liées aux diverses cultures et époques. Sa spécificité,
+          parmi les grands budo, est d’avoir gardé toutes les traces
+          de son histoire dans une forme plurielle. Il existe ainsi
+          une grande variété de styles et d’écoles qui en font sa richesse.</p>
+
+
+
+      </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<!--<div class="card card-profile ">
+  <div class="card-avatar w-100">
+    <a href="javascript:void(0)">
+      <img id="card" class="img img-responsive img-circle" [src]="membre.afficheUrl" />
+    </a>
+  </div>
+  <div class="card-body">
+    <h6 class="card-category text-gray">{{membre.status}}</h6>
+    <h4 class="card-title">{{membre.title}}</h4>
+    <p class="card-description">
+      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+    </p>
+    <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
+  </div>
+</div>-->
+

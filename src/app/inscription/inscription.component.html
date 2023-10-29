@@ -1,0 +1,48 @@
+<div class="flex-containers">
+  <div class="form-card">
+    <h2>NOUVEAU MEMBRE</h2>
+    <form [formGroup]="membreForm">
+      <div class="form-group">
+        <label for="title">Titre<sup>*</sup></label>
+        <input id="title" type="text" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="dateofbirth">Date de Naissance<sup>*</sup></label>
+        <input id="dateofbirth" type="date" formControlName="dateofbirth">
+      </div>
+      <div class="form-group">
+        <label for="status">Status<sup>*</sup></label>
+        <input id="status" type="text" formControlName="status">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="ceinture">couleur ceinture<sup>*</sup></label>
+        <textarea id="ceinture" type="text" formControlName="ceinture" rows="4">
+        </textarea>
+      </div>
+      <div class="form-group">
+        <label for="afficheUrl">Lien de l'image<sup>*</sup></label>
+        <input id="afficheUrl" type="text" formControlName="afficheUrl">
+      </div>
+
+      <div *ngIf="membreForm.invalid">
+        <span class="help-block">Veuillez remplir tous les champs obligatoires...</span>
+      </div>
+      <div class="action-buttons">
+        <button type="submit" (click)="onSubmitForm()" [disabled]="membreForm.invalid">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container" *ngIf="membrepreview$ | async as membre">
+  <h2 *ngIf="membre.title!=null">{{ membre.title | titlecase }}</h2>
+    <p *ngIf="membre.email"><strong>email: </strong>{{ membre.email }} </p>
+  <img *ngIf="membre.afficheUrl!=null" [src]="membre.afficheUrl" [alt]="membre.title" />
+    <p *ngIf="membre.status!=null"><strong>status: </strong>{{ membre.status }}</p>
+  <p><strong *ngIf="membre.ceinture!=null">Couleur de la ceinture :</strong> {{ membre.ceinture }}<br/>
+    <strong *ngIf="membre.dateofbirth">Date de Naissance :</strong>{{membre.dateofbirth | date:'yyyy' }}</p>
+</div>
+

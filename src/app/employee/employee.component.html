@@ -1,0 +1,37 @@
+
+
+
+<input type="search" class="form-control border-primary m-2" id="exampleFormControlInput1" placeholder="chercher par id ou titre" [(ngModel)]="searchtext">
+
+  <table id="customers" class="table table-bordered h-auto">
+
+    <!--Table head-->
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">title</th>
+          <th scope="col">dateofbirth</th>
+          <th scope="col">Photo</th>
+          <th scope="col">salaire</th>
+          <th scope="col">email</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employee2 | search :searchtext">
+          <th scope="row">{{employee.id | number}}</th>
+
+          <td>{{employee.title}}</td>
+          <td>{{employee.dateofbirth | date:'yyyy'}}</td>
+          <!--<td>{{employee.status}}</td>-->
+          <td><img [src]="employee.afficheUrl"></td>
+          <td>{{employee.salaire | currency }}</td>
+          <td>{{employee.email}}</td>
+        </tr>
+      </tbody>
+  </table>
+
+
+
+
+
