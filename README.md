@@ -1,7 +1,6 @@
 # karate-club-Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
-
+Dieses Angular-Projekt befasst sich mit der Erstellung einer Website für einen Karateverein. Diese Anwendung ermöglicht es jeder Karateorganisation, ihre Mitglieder zu verwalten und ihre Aktivitäten der Öffentlichkeit zu präsentieren. Sie bietet Außenstehenden die Möglichkeit, sich über ein Formular anzumelden, stellt das Personal der Organisation in Tabellenform mit einer Übersicht dar und bietet eine Übersicht über die Aktivitäten der Organisation
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
